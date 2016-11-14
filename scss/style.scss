@@ -1,0 +1,210 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
+
+$primary: #ffcc00;
+$primary-font:'Raleway', sans-serif;
+$heading-font:'Roboto' , sans-serif;
+
+body{
+	font: 400 14px/1.7 $primary-font;
+	color: #333;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+}
+
+
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 900;
+	font-family: $heading-font;
+	line-height: 1.2;
+}
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-team {
+	padding: 110px 0;
+	text-align: center;
+	&__title {
+		text-transform: uppercase;
+		font-size: 60px;
+		color: $primary;
+		margin: 0 0 48px;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 450px;
+			height: 1px;
+			background: $primary;
+			margin: 24px auto 0;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background: #fff url(../img/bonfire.svg) 50% no-repeat;
+			height: 20px;
+			width: 40px;
+			transform: translate(-50%, 50%);
+		}
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		color: #898f8f;
+		margin: 0;
+	}
+}
+
+.ba-team-slider {
+	display: flex;
+	&__image, &__content {
+		flex: 1 1 50%;
+	}
+	&__image {
+		padding: 0 60px 0 83px;
+		display: flex;
+		align-items: center;
+		img {
+			border: 1px solid $primary;
+			display: block;
+			box-shadow: 40px 0 0 -20px #fff,
+			-40px 0 0 -20px #fff,
+			0 40px 0 -20px #fff,
+			0 -40px 0 -20px #fff;
+		}
+
+	}
+	&__image-border {
+		border: 1px solid $primary;
+		padding: 15px;
+	}
+	&__content {
+		padding: 90px 68px 70px 83px;
+		border-left: 1px solid $primary;
+	}
+}
+.ba-team-slider__content {
+	h3 {
+		font-size: 36px;
+		color: #666666;
+		margin: 0;
+		&:after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 1px;
+			background: $primary;
+			margin: 30px auto;
+		}
+	}
+	.ba-team__position  {
+		color:  #666666;
+		font-size: 24px;
+	}
+}
+.ba-socials {
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		color: #cccccc;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+		text-align: center;
+		padding: 4px;
+		margin-right: 3px;
+		&:hover {
+			color: $primary;
+		}
+		svg {
+			display: inline-block;
+			width: 70%;
+			height: 70%;
+			fill:currentColor;
+			margin-bottom: 18px;
+		}
+	}
+}
+.ba-button {
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid $primary;
+	color: #666666;
+	font-weight: bold;
+	text-decoration: none;
+	position: relative;
+	padding: 0 15px;
+	margin-top: 30px;
+	&:hover {
+		background:$primary ;
+		color: #FFF;
+	}
+
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 50px ;
+		transform: translate(-50%, 50%);
+		border-top: 3px  dashed $primary;
+		height: 3px;
+		width: 50px;
+	}
+}
